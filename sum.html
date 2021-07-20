@@ -1,0 +1,69 @@
+<html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<head>
+<title>Hello apps</title>    
+</head>
+<body>
+    <h1>TEST CALCULATOR</h1>
+    Enter number 1<input type="number" name="n1" id="n1"/> <br>
+    Enter number 2<input type="number" name="n2" id="n2"/> <br>
+    <label for="cars">Choose what to do:</label>
+
+       <select name="op" id="op">
+            <option value="add">add</option>
+            <option value="sub">Sub</option>
+            <option value="div">div</option>
+            <option value="mul">mul</option>
+       </select>
+    <br>
+    <input type="submit" value="get output" onclick="operate()"/> 
+    
+    <p id="sum"></p>
+</body>
+<script>
+    
+    function operate()
+    {
+        var sel = document.getElementById("op").value
+        if(sel=="add")
+            add()
+        if(sel=="sub")
+            sub()
+        if(sel=="div")
+            div()
+        if(sel=="mul")
+            mul()
+    }
+    
+    function add() 
+    {
+        var a = document.getElementById("n1").value 
+        var b = document.getElementById("n2").value 
+        var z = Number(a)+Number(b)
+       document.getElementById("sum").innerHTML = "sum is "+z;
+    }
+    function sub()
+    {
+        var a = document.getElementById("n1").value 
+        var b = document.getElementById("n2").value 
+        var z =  Number(a) - Number(b);
+         
+       document.getElementById("sum").innerHTML ="diffrence is "+ z;
+    }
+    function div() 
+    {
+        var a = document.getElementById("n1").value 
+        var b = document.getElementById("n2").value 
+        var z = Number(a)/Number(b)
+       document.getElementById("sum").innerHTML = "answer is "+z;
+    }
+    function mul()
+    {
+        var a = document.getElementById("n1").value 
+        var b = document.getElementById("n2").value 
+        var z =  Number(a) * Number(b);
+         
+       document.getElementById("sum").innerHTML ="product is "+ z;
+    }
+</script>
+</html>
