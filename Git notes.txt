@@ -1,0 +1,29 @@
+step 1 ::   change to the path which you need to push
+
+eg :: $ cd "F:\Dump\project dumps\java script"
+
+
+step 2 ::   $ git init                             //initilizes the git
+
+
+step 3 ::   $ git remote add origin <gitLink>      //gets the repo for first time 
+
+step 4 ::   $ git remote -v                        // checks the access to push or pull
+
+step 5 ::   $ git add
+
+eg :: git add .                                     //adds all the files in that repo
+
+
+
+step 6 ::   $ git commit -m "First commit"         
+
+
+step 7 ::   $ git push origin master
+
+
+git help
+
+for the next time commit just change the directory and rest will be same
+
+
